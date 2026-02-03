@@ -8,17 +8,26 @@ function Footer() {
         <h1 className="text-lg jet text-[#F4F4F5]">2026 Takumi</h1>
       </div>
       <div className="gap-6 flex">
-        <a className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]" href="https://x.com/hiretakumi">
+        <a
+          className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]"
+          href="https://x.com/hiretakumi"
+        >
           X
         </a>
-        <a className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]" href="https://discord.gg/takumi">
+        <a
+          className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]"
+          href="https://discord.gg/zdvvMUKC"
+        >
           Discord
         </a>
-        <a className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]" href="mailto:contact@hiretakumi.com">
+        <a
+          className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]"
+          href="mailto:contact.takumi.run@gmail.com"
+        >
           Email
         </a>
       </div>
-      <h1 className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]">
+      <h1 className="text-md text-[#F4F4F5] jet hover:text-[#F59E0B]">
         ● All Systems Operational
       </h1>
     </div>
