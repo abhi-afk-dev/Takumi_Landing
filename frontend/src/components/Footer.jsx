@@ -18,7 +18,7 @@ function Footer() {
           className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]"
           href="https://discord.gg/zdvvMUKC/"
           target="_blank"
-          rel="noopener noreferrer"
+          // rel="noopener noreferrer"
         >
           Discord
         </a>
