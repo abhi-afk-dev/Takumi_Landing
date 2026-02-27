@@ -13,7 +13,7 @@ function Header({ onJoinClick }) {
 
       <div className="flex items-center gap-4 md:gap-6">
         <a
-          href="https://twitter.com"
+          href="https://x.com/hiretakumi"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[#F59E0B] transition-colors duration-300"
