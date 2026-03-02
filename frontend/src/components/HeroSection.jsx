@@ -55,7 +55,7 @@ function HeroSection({ onJoinClick }) {
             <Button />
           </div>
           <span className="text-[#F59E0B]/80 bg-[#27272A]/20 px-2 py-1 text-xs md:text-sm jet font-bold tracking-wide">
-            Limit: 82 spots
+            Limit: 79 spots
           </span>
         </div>
       </div>
