@@ -1,8 +1,31 @@
-import{ useState, useEffect } from "react";
 import { Terminal, CheckCircle2, XCircle, Loader2, Cpu } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 
 const SelfHealingSection = () => {
   const [currentStep, setCurrentStep] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (sectionRef.current) observer.unobserve(sectionRef.current);
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentStep((prev) => (prev + 1) % 3);
@@ -11,12 +34,37 @@ const SelfHealingSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col border border-[#F4F4F5]/10 md:border-[#F4F4F5]/15 px-10 py-20 w-full justify-center items-center gap-5">
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="z-10">
+    <div className="flex flex-col border border-[#F4F4F5]/10 md:border-[#F4F4F5]/10 px-10 py-20 w-full justify-center items-center gap-5">
+      <style>
+        {`
+          @keyframes slideInLeft {
+            0% { opacity: 0; transform: translateX(-40px); }
+            100% { opacity: 1; transform: translateX(0); }
+          }
+          @keyframes slideInRight {
+            0% { opacity: 0; transform: translateX(40px); }
+            100% { opacity: 1; transform: translateX(0); }
+          }
+        `}
+      </style>
+      <div
+        ref={sectionRef}
+        className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+      >
+        <div
+          className="z-10"
+          style={{
+            animation: isVisible
+              ? "slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards"
+              : "none",
+            opacity: 0,
+          }}
+        >
           <div className="gap-6 pb-6 flex flex-col">
             <h2 className="text-4xl jet text-start font-bold tracking-tight">
-              Self-Healing Runtime<span className="text-[#F59E0B]">{"<."}</span>
+              {/* Self-Healing Runtime<span className="text-[#F59E0B]">{"<."}</span> */}
+              When it breaks, Takumi fixes it
+              <span className="text-[#F59E0B]">{"<."}</span>
             </h2>
             <p className="text-[#F4F4F5] jet opacity-60 text-lg leading-relaxed max-w-lg">
               Most agents stop when they hit an error. Takumi reads the stack
@@ -36,7 +84,7 @@ const SelfHealingSection = () => {
                 01 |
               </span>
               <span
-                className={ 
+                className={
                   currentStep === 0
                     ? "text-[#F4F4F5]"
                     : "text-[#F4F4F5] opacity-50"
@@ -88,7 +136,16 @@ const SelfHealingSection = () => {
           </div>
         </div>
 
-        <div className="relative group">
+        <div
+          className="relative group"
+          style={{
+            animation: isVisible
+              ? "slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards"
+              : "none",
+            opacity: 0,
+            animationDelay: isVisible ? "0.2s" : "0s",
+          }}
+        >
           <div className="absolute -inset-1 bg-[#F59E0B]/20 blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-1000"></div>
 
           <div className="relative bg-[#0F0F0F] border border-[#F4F4F5]/10 rounded-lg overflow-hidden shadow-2xl h-80 flex flex-col font-mono text-sm">

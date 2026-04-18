@@ -2,7 +2,7 @@ import { FaRegCopyright } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="flex flex-wrap border border-[#F4F4F5]/10 md:border-[#F4F4F5]/15 px-10 py-6 w-full justify-between items-center gap-5">
+    <div className="flex flex-wrap border border-[#F4F4F5]/10 md:border-[#F4F4F5]/10 px-10 py-6 w-full justify-between items-center gap-5">
       <div className="flex justify-center items-center gap-1">
         <FaRegCopyright color="#F4F4F5" size="20" />
         <h1 className="text-lg jet text-[#F4F4F5]">2026 Takumi</h1>

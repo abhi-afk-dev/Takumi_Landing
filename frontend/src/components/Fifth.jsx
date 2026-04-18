@@ -26,10 +26,10 @@ function Fifth({ onJoinClick }) {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative overflow-hidden flex flex-col border border-[#F4F4F5]/10 md:border-[#F4F4F5]/15 py-20 w-full justify-center items-center gap-10 md:gap-20 group"
+      className="relative overflow-hidden flex flex-col border border-[#F4F4F5]/10  md:border-[#F4F4F5]/10 py-20 w-full justify-center items-center gap-10 md:gap-20 group"
     >
       <div
-        className="absolute w-[200px] h-[200px] bg-[#F59E0B]/80 rounded-full blur-[100px] pointer-events-none transition-all ease-out"
+        className="absolute w-[200px] h-[200px] bg-[#F59E0B]/60 rounded-full blur-[100px] pointer-events-none transition-all ease-out"
         style={{
           left: position.x,
           top: position.y,

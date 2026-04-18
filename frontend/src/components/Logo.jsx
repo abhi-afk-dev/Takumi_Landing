@@ -66,7 +66,7 @@ const techStack = [
 function Second() {
   return (
     <div className="w-full">
-      <div className="flex relative flex-col border border-[#F4F4F5]/10 md:border-[#F4F4F5]/15 px-10 py-2 w-full justify-center items-center gap-5 overflow-hidden">
+      <div className="flex relative flex-col border border-[#F4F4F5]/10 md:border-[#F4F4F5]/10 px-10 py-2 w-full justify-center items-center gap-5 overflow-hidden">
         <div className="flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex w-max gap-8 animate-scroll hover:[animation-play-state:paused]">
             {techStack.map((tech, index) => (
@@ -85,6 +85,18 @@ function Second() {
             {techStack.map((tech, index) => (
               <div
                 key={`tech-2-${index}`}
+                className="flex items-center justify-center min-w-[80px]"
+              >
+                <tech.icon
+                  size="36"
+                  className="text-[#F4F4F5] transition-colors duration-300 hover:text-[#F59E0B] cursor-pointer"
+                  title={tech.name}
+                />
+              </div>
+            ))}
+            {techStack.map((tech, index) => (
+              <div
+                key={`tech-3-${index}`}
                 className="flex items-center justify-center min-w-[80px]"
               >
                 <tech.icon
