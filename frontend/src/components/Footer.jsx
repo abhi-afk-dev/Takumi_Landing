@@ -24,7 +24,7 @@ function Footer() {
         </a> */}
         <a
           className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]"
-          href="mailto:contact.takumi.run@gmail.com"
+          href="mailto:hiretakumi.run@gmail.com"
         >
           Email
         </a>
