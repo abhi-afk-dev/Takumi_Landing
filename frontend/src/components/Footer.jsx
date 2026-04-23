@@ -14,14 +14,14 @@ function Footer() {
         >
           X
         </a>
-        {/* <a
+        <a
           className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]"
-          href="https://discord.gg/zdvvMUKC"
+          href="https://discord.gg/spe79aHC9W"
           target="_blank"
           rel="noopener noreferrer"
         >
           Discord
-        </a> */}
+        </a>
         <a
           className="text-lg text-[#F4F4F5] jet hover:text-[#F59E0B]"
           href="mailto:hiretakumi.run@gmail.com"
