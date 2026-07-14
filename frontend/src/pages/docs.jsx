@@ -93,7 +93,7 @@ export default function Docs() {
           in your project folder. Go to the Extensions tab (left sidebar),
           search{" "}
           <code className="text-orange-400 bg-orange-500/10 px-1.5 py-0.5 rounded font-mono text-sm">
-            Takumi_Extension
+            Takumi_Bridge
           </code>{" "}
           and click Install.
         </>
