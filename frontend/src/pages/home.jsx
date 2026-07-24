@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import CommandPalette from "../components/CommandPalette.jsx";
 import HearoSection from "../components/HeroSection.jsx";
 import Footer from "../components/Footer.jsx";
@@ -13,6 +13,18 @@ import What from "../components/What.jsx";
 function home() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const openWaitlist = () => setIsWaitlistOpen(true);
+  useEffect(() => {
+    const checkUser = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (session) {
+        window.location.href = "https://app.takumi.run/mvp";
+      }
+    };
+    checkUser();
+  }, []);
+
   return (
     <>
       <div className="flex flex-col p-4 md:p-10 gap-4 md:gap-8 items-center justify-start bg-[#0A0A0C] min-h-screen text-white">

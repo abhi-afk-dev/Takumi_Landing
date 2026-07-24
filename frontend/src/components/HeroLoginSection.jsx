@@ -10,25 +10,27 @@ function HeroLoginSection() {
   const [position, setPosition] = useState({ x: "50%", y: "50%" });
   const [isHovering, setIsHovering] = useState(false);
 
-  const handleGitHubLogin = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "github",
-    });
-    if (error) console.error("GitHub login error:", error.message);
-  };
+const handleGitHubLogin = async () => {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "github",
+    options: {
+      redirectTo: "https://app.takumi.run/mvp", // Just add this line
+    },
+  });
+};
 
-  const handleGoogleLogin = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        queryParams: {
-          access_type: "offline",
-          prompt: "consent",
-        },
+const handleGoogleLogin = async () => {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      queryParams: {
+        access_type: "offline",
+        prompt: "consent",
       },
-    });
-    if (error) console.error("Google login error:", error.message);
-  };
+      redirectTo: "https://app.takumi.run/mvp", // Just add this line
+    },
+  });
+};
 
   return (
     <div
