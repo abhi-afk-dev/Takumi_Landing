@@ -13,17 +13,6 @@ import What from "../components/What.jsx";
 function home() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const openWaitlist = () => setIsWaitlistOpen(true);
-  useEffect(() => {
-    const checkUser = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
-      if (session) {
-        window.location.href = "https://app.takumi.run/mvp";
-      }
-    };
-    checkUser();
-  }, []);
 
   return (
     <>
