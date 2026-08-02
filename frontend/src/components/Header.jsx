@@ -33,7 +33,9 @@ export default function Header() {
             ))}
           </div>
           <a
-            href="/login"
+            href="https://app.takumi.run/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative overflow-hidden inline-flex items-center gap-2 bg-black text-white font-mono font-semibold uppercase tracking-wide text-[13px] px-5 py-[11px] rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-6px_rgba(0,0,0,0.35)] hover:bg-[#222] transition-all duration-300 group"
           >
             <span

@@ -4,20 +4,81 @@ import { useTextScramble } from "../hooks/useTextScramble";
 import { useIdeaDemo } from "../hooks/useIdeaDemo";
 
 const nodes = [
-  { cx: 70, cy: 170, r: 8, label: "Idea", labelY: 200, dur: "3.4s", floatDelay: "-0.2s", pingDelay: "0.3s" },
-  { cx: 210, cy: 170, r: 8, label: "Tech Lead", labelY: 200, dur: "3.8s", floatDelay: "-1.1s", pingDelay: "1.4s" },
-  { cx: 380, cy: 80, r: 7, label: "Frontend", labelY: 60, dur: "3.2s", floatDelay: "-0.6s", pingDelay: "2.6s" },
-  { cx: 380, cy: 170, r: 7, label: "Backend", labelY: 200, dur: "4s", floatDelay: "-2s", pingDelay: "2.65s" },
-  { cx: 380, cy: 260, r: 7, label: "DevOps", labelY: 290, dur: "3.6s", floatDelay: "-1.5s", pingDelay: "2.7s" },
+  {
+    cx: 70,
+    cy: 170,
+    r: 8,
+    label: "Idea",
+    labelY: 200,
+    dur: "3.4s",
+    floatDelay: "-0.2s",
+    pingDelay: "0.3s",
+  },
+  {
+    cx: 210,
+    cy: 170,
+    r: 8,
+    label: "Tech Lead",
+    labelY: 200,
+    dur: "3.8s",
+    floatDelay: "-1.1s",
+    pingDelay: "1.4s",
+  },
+  {
+    cx: 380,
+    cy: 80,
+    r: 7,
+    label: "Frontend",
+    labelY: 60,
+    dur: "3.2s",
+    floatDelay: "-0.6s",
+    pingDelay: "2.6s",
+  },
+  {
+    cx: 380,
+    cy: 170,
+    r: 7,
+    label: "Backend",
+    labelY: 200,
+    dur: "4s",
+    floatDelay: "-2s",
+    pingDelay: "2.65s",
+  },
+  {
+    cx: 380,
+    cy: 260,
+    r: 7,
+    label: "DevOps",
+    labelY: 290,
+    dur: "3.6s",
+    floatDelay: "-1.5s",
+    pingDelay: "2.7s",
+  },
 ];
 
 const paths = [
-  { d: "M70,170 C140,170 140,170 210,170", delay: "0.15s", packetDelay: "0.4s" },
+  {
+    d: "M70,170 C140,170 140,170 210,170",
+    delay: "0.15s",
+    packetDelay: "0.4s",
+  },
   { d: "M210,170 C280,170 300,80 380,80", delay: "0.35s", packetDelay: "1.6s" },
-  { d: "M210,170 C280,170 280,170 380,170", delay: "0.45s", packetDelay: "1.65s" },
-  { d: "M210,170 C280,170 300,260 380,260", delay: "0.55s", packetDelay: "1.7s" },
+  {
+    d: "M210,170 C280,170 280,170 380,170",
+    delay: "0.45s",
+    packetDelay: "1.65s",
+  },
+  {
+    d: "M210,170 C280,170 300,260 380,260",
+    delay: "0.55s",
+    packetDelay: "1.7s",
+  },
   { d: "M380,80 C460,80 480,166 560,166", delay: "0.85s", packetDelay: "2.9s" },
-  { d: "M380,170 C460,170 460,166 560,166", delay: "0.95s", packetDelay: "2.95s" },
+  {
+    d: "M380,170 C460,170 460,166 560,166",
+    delay: "0.95s",
+    packetDelay: "2.95s",
+  },
   { d: "M380,260 C460,260 480,166 560,166", delay: "1.05s", packetDelay: "3s" },
 ];
 
@@ -26,32 +87,80 @@ function HeroVisual() {
     <div className="max-w-[760px] mx-auto px-2.5" aria-hidden="true">
       <svg viewBox="0 0 640 340" width="100%">
         {paths.map((p, i) => (
-          <path key={i} className="flow-path" d={p.d} style={{ animationDelay: p.delay }} />
+          <path
+            key={i}
+            className="flow-path"
+            d={p.d}
+            style={{ animationDelay: p.delay }}
+          />
         ))}
         {paths.map((p, i) => (
           <circle
             key={i}
             className="flow-packet"
             r="3.5"
-            style={{ offsetPath: `path("${p.d}")`, animationDelay: p.packetDelay }}
+            style={{
+              offsetPath: `path("${p.d}")`,
+              animationDelay: p.packetDelay,
+            }}
           />
         ))}
         {nodes.map((n, i) => (
-          <g key={i} className="flow-node" style={{ animationDuration: n.dur, animationDelay: n.floatDelay }}>
-            <circle className="node-ping" cx={n.cx} cy={n.cy} r={n.r} style={{ animationDelay: n.pingDelay }} />
-            <circle className="node-core" cx={n.cx} cy={n.cy} r={n.r} style={{ animationDelay: n.pingDelay }} />
+          <g
+            key={i}
+            className="flow-node"
+            style={{ animationDuration: n.dur, animationDelay: n.floatDelay }}
+          >
+            <circle
+              className="node-ping"
+              cx={n.cx}
+              cy={n.cy}
+              r={n.r}
+              style={{ animationDelay: n.pingDelay }}
+            />
+            <circle
+              className="node-core"
+              cx={n.cx}
+              cy={n.cy}
+              r={n.r}
+              style={{ animationDelay: n.pingDelay }}
+            />
             <text x={n.cx} y={n.labelY} textAnchor="middle">
               {n.label}
             </text>
           </g>
         ))}
-        <g className="flow-node" style={{ animationDuration: "4.2s", animationDelay: "-0.9s" }}>
-          <ellipse className="cube-ring ring-1" cx="560" cy="166" rx="22" ry="11" />
-          <ellipse className="cube-ring ring-2" cx="560" cy="166" rx="30" ry="15" />
+        <g
+          className="flow-node"
+          style={{ animationDuration: "4.2s", animationDelay: "-0.9s" }}
+        >
+          <ellipse
+            className="cube-ring ring-1"
+            cx="560"
+            cy="166"
+            rx="22"
+            ry="11"
+          />
+          <ellipse
+            className="cube-ring ring-2"
+            cx="560"
+            cy="166"
+            rx="30"
+            ry="15"
+          />
           <g className="final-cube">
-            <polygon className="cube-face top" points="560,150 574,158 560,166 546,158" />
-            <polygon className="cube-face left" points="546,158 560,166 560,182 546,174" />
-            <polygon className="cube-face right" points="560,166 574,158 574,174 560,182" />
+            <polygon
+              className="cube-face top"
+              points="560,150 574,158 560,166 546,158"
+            />
+            <polygon
+              className="cube-face left"
+              points="546,158 560,166 560,182 546,174"
+            />
+            <polygon
+              className="cube-face right"
+              points="560,166 574,158 574,174 560,182"
+            />
           </g>
           <text x="560" y="210" textAnchor="middle">
             Shipped
@@ -69,7 +178,8 @@ export default function Hero() {
   const [revealRef, inView] = useReveal();
   const { sectionRef, glowRef, registerTilt } = useHeroTilt();
   const scrambleRef = useTextScramble("dev team", 400);
-  const { idea, setIdea, lines, showCta, running, run, resolvedIdea } = useIdeaDemo();
+  const { idea, setIdea, lines, showCta, running, run, resolvedIdea } =
+    useIdeaDemo();
 
   function onKeyDown(e) {
     if (e.key === "Enter") {
@@ -89,24 +199,32 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(rgba(0,0,0,0.3) 1.5px, transparent 1.5px)",
+          backgroundImage:
+            "radial-gradient(rgba(0,0,0,0.3) 1.5px, transparent 1.5px)",
           backgroundSize: "28px 28px",
           backgroundPosition: "center top",
           maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, black 40%, transparent 100%)",
         }}
       />
 
       <div
         ref={glowRef}
         className="hidden sm:block absolute w-[600px] h-[600px] rounded-full pointer-events-none z-[1] -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-500 mix-blend-multiply"
-        style={{ background: "radial-gradient(circle, rgba(0,0,0,0.03) 0%, transparent 60%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(0,0,0,0.03) 0%, transparent 60%)",
+        }}
       />
 
       <div
         aria-hidden="true"
         className="breathe-glow absolute -top-[10%] left-1/2 -translate-x-1/2 w-[500px] sm:w-[700px] md:w-[900px] h-[400px] sm:h-[500px] md:h-[600px] blur-[40px] pointer-events-none z-0"
-        style={{ background: "radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, transparent 70%)",
+        }}
       />
 
       <div
@@ -124,7 +242,9 @@ export default function Hero() {
           <span
             ref={scrambleRef}
             className="inline-block bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(100deg, #000 12%, #666 88%)" }}
+            style={{
+              backgroundImage: "linear-gradient(100deg, #000 12%, #666 88%)",
+            }}
           >
             dev team
           </span>
@@ -137,7 +257,9 @@ export default function Hero() {
 
         <div className="flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
           <a
-            href="/login"
+            href="https://app.takumi.run/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative overflow-hidden inline-flex items-center gap-2 bg-black text-white font-mono font-semibold uppercase tracking-wide text-[13px] sm:text-sm px-6 sm:px-[30px] py-3 sm:py-[15px] rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-6px_rgba(0,0,0,0.35)] hover:bg-[#222] transition-all duration-300"
           >
             Join Alpha
@@ -176,7 +298,11 @@ export default function Hero() {
               onClick={run}
               className="w-full sm:w-auto justify-center flex-shrink-0 px-[18px] py-3 sm:py-[13px] text-[11px] sm:text-xs bg-black text-white font-mono font-semibold uppercase tracking-wide rounded-lg disabled:opacity-70 disabled:cursor-default transition-all inline-flex items-center gap-2"
             >
-              {running ? "Assembling…" : lines.length ? "Try another idea →" : "Assemble my team →"}
+              {running
+                ? "Assembling…"
+                : lines.length
+                  ? "Try another idea →"
+                  : "Assemble my team →"}
             </button>
           </div>
 
@@ -197,10 +323,15 @@ export default function Hero() {
                 <div className="mt-3.5 p-4 bg-white border border-hairline rounded-lg shadow-sm font-mono text-[12px] sm:text-[13px] font-medium text-ash flex items-center gap-3.5 flex-wrap text-left">
                   <span className="break-words">
                     Your team is ready to build{" "}
-                    <strong className="text-paper font-bold break-words">{resolvedIdea}</strong>.
+                    <strong className="text-paper font-bold break-words">
+                      {resolvedIdea}
+                    </strong>
+                    .
                   </span>
                   <a
-                    href="/login"
+                    href="https://app.takumi.run/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-4 py-2.5 text-[11px] bg-black text-white font-mono font-semibold uppercase tracking-wide rounded-lg"
                   >
                     Join Alpha to start →

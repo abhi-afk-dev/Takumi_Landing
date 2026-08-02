@@ -6,7 +6,12 @@ export default function AnnouncementBar() {
           Alpha is open — we onboard in small batches to keep build quality
           high.
         </span>
-        <a href="/login" className="text-black font-bold whitespace-nowrap underline hover:text-ash-dim transition-colors">
+        <a
+          href="https://app.takumi.run/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black font-bold whitespace-nowrap underline hover:text-ash-dim transition-colors"
+        >
           Join now →
         </a>
       </div>

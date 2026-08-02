@@ -14,7 +14,9 @@ export default function Cta() {
         </p>
 
         <a
-          href="/login"
+          href="https://app.takumi.run/login"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex bg-black text-white font-mono text-[14px] font-semibold uppercase tracking-wide py-3.5 px-8 rounded-md shadow-[0_4px_12px_var(--ember-glow)] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-6px_rgba(0,0,0,0.35)] transition-all duration-250"
         >
           Join Alpha
