@@ -46,20 +46,20 @@ export default function Footer() {
         </p>
 
         <div className="flex gap-5">
-          <a
-            href="#"
+          {/* <a
+            href="https://x.com/hiretakumi"
             className="font-mono text-[12.5px] font-semibold text-[var(--ash)] hover:text-black transition-colors"
           >
             X
-          </a>
+          </a> */}
           <a
-            href="#"
+            href="https://discord.gg/spe79aHC9W"
             className="font-mono text-[12.5px] font-semibold text-[var(--ash)] hover:text-black transition-colors"
           >
             Discord
           </a>
           <a
-            href="#"
+            href="mailto:hiretakumi.run@gmail.com"
             className="font-mono text-[12.5px] font-semibold text-[var(--ash)] hover:text-black transition-colors"
           >
             Email
