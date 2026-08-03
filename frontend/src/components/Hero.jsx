@@ -277,9 +277,9 @@ export default function Hero() {
           className="mt-7 sm:mt-9 max-w-[560px] mx-auto"
           style={{ transformStyle: "preserve-3d", willChange: "transform" }}
         >
-          <p className="font-mono text-[10px] sm:text-[11px] font-bold tracking-wide uppercase text-ash-dim text-center mb-2.5">
+          {/* <p className="font-mono text-[10px] sm:text-[11px] font-bold tracking-wide uppercase text-ash-dim text-center mb-2.5">
             Try it — no signup needed
-          </p>
+          </p> */}
 
           <div className="flex flex-col sm:flex-row gap-2.5 sm:bg-white sm:p-2 sm:rounded-xl sm:shadow-md sm:border sm:border-hairline">
             <input
