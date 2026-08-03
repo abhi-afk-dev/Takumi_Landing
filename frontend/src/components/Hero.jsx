@@ -234,7 +234,7 @@ export default function Hero() {
         }`}
       >
         <p className="font-mono text-[10px] sm:text-[11.5px] tracking-[0.16em] uppercase text-ash mb-3 sm:mb-4 font-bold">
-          AI ENGINEERING, ORCHESTRATED
+          A TEAM, NOT ANOTHER ASSISTANT
         </p>
 
         <h1 className="font-display font-extrabold text-[36px] sm:text-[48px] md:text-[60px] lg:text-[74px] tracking-[-0.03em] leading-[1.06] sm:leading-[1.04] text-paper mb-4 sm:mb-5">
@@ -251,8 +251,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-[15px] sm:text-[17px] md:text-[19px] text-ash max-w-[600px] mx-auto mb-6 sm:mb-8 leading-relaxed font-medium px-2">
-          Cursor is for developers. Takumi is for builders. Describe your app,
-          and your AI team handles the full tech stack.
+          Not another assistant. A team that ships.
         </p>
 
         <div className="flex items-center justify-center gap-4 sm:gap-6 flex-wrap">

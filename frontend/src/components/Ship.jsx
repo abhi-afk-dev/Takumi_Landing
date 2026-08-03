@@ -71,7 +71,7 @@ export default function Ship() {
           }`}
         >
           <p className="font-mono text-[11.5px] tracking-[0.16em] uppercase text-ash mb-4 font-bold flex items-center gap-2 before:content-[''] before:w-3.5 before:h-0.5 before:bg-black">
-            Ship Anything
+            FROM BRIEF TO PRODUCTION
           </p>
           <h2 className="font-display font-extrabold text-[clamp(28px,3.6vw,44px)] tracking-[-0.01em] leading-[1.12] text-paper">
             What you can ship tonight.

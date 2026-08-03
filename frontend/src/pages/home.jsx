@@ -10,6 +10,7 @@ import Cta from "../components/Cta";
 import Footer from "../components/Footer";
 import "../index.css";
 import AnnouncementBar from "../components/AnnouncementBar";
+import CompetitorCompare from "../components/CompetitorCard";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <main>
         <Hero />
         <Compare />
+        <CompetitorCompare />
         <Squad />
         <Ship />
         <StackMarquee />

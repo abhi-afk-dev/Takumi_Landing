@@ -2,7 +2,7 @@ export default function Faq() {
   const faqs = [
     {
       q: "How is this different from Claude Code / Cursor / Devin?",
-      a: "Those give you one assistant helping you write code — great if you're already the engineer. Takumi gives you a role-divided team sharing one project context (scoping, frontend, backend, devops) instead of one generalist you re-explain everything to.",
+      a: "Short answer: see the comparison above. Long answer: most tools give you one strong generalist you direct. Takumi gives you a team that already knows its own job.",
     },
     {
       q: "So it's just multiple prompts wrapped in a UI?",
