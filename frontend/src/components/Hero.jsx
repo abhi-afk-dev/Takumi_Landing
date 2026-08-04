@@ -233,11 +233,11 @@ export default function Hero() {
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[22px]"
         }`}
       >
-        <p className="font-mono text-[10px] sm:text-[11.5px] tracking-[0.16em] uppercase text-ash mb-3 sm:mb-4 font-bold">
+        <p className="font-mono text-md md:text-sm tracking-[0.16em] uppercase text-ash mb-3 sm:mb-4 font-bold">
           A TEAM, NOT ANOTHER ASSISTANT
         </p>
 
-        <h1 className="font-display font-extrabold text-[36px] sm:text-[48px] md:text-[60px] lg:text-[74px] tracking-[-0.03em] leading-[1.06] sm:leading-[1.04] text-paper mb-4 sm:mb-5">
+        <h1 className="font-display font-extrabold text-[74px] tracking-[-0.03em] leading-[1.06] sm:leading-[1.04] text-paper mb-4 sm:mb-5">
           Hire an AI{" "}
           <span
             ref={scrambleRef}
@@ -250,7 +250,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="text-[15px] sm:text-[17px] md:text-[19px] text-ash max-w-[600px] mx-auto mb-6 sm:mb-8 leading-relaxed font-medium px-2">
+        <p className="text-md text-ash max-w-[600px] mx-auto mb-6 sm:mb-8 leading-relaxed font-medium px-2">
           Not another assistant. A team that ships.
         </p>
 
@@ -265,7 +265,7 @@ export default function Hero() {
           </a>
           <a
             href="#squad"
-            className="font-mono text-[13px] font-semibold text-ash inline-flex items-center gap-1.5 hover:text-paper hover:gap-2.5 transition-all"
+            className="font-mono md:text-md text-sm font-semibold text-ash inline-flex items-center gap-1.5 hover:text-paper hover:gap-2.5 transition-all"
           >
             Meet the team ↓
           </a>
@@ -295,7 +295,7 @@ export default function Hero() {
               type="button"
               disabled={running}
               onClick={run}
-              className="w-full sm:w-auto justify-center flex-shrink-0 px-[18px] py-3 sm:py-[13px] text-[11px] sm:text-xs bg-black text-white font-mono font-semibold uppercase tracking-wide rounded-lg disabled:opacity-70 disabled:cursor-default transition-all inline-flex items-center gap-2"
+              className="w-full sm:w-auto justify-center flex-shrink-0 px-[18px] py-3 sm:py-[13px] text-xs bg-black text-white font-mono font-semibold uppercase tracking-wide rounded-lg disabled:opacity-70 disabled:cursor-default transition-all inline-flex items-center gap-2"
             >
               {running
                 ? "Assembling…"
@@ -310,7 +310,7 @@ export default function Hero() {
               {lines.map((l, i) => (
                 <p
                   key={i}
-                  className={`font-mono text-[12px] sm:text-[13px] font-medium pt-1.5 px-0.5 break-words ${
+                  className={`font-mono text-sm font-medium pt-1.5 px-0.5 break-words ${
                     l.ok ? "text-black font-bold" : "text-ash"
                   }`}
                 >
@@ -319,7 +319,7 @@ export default function Hero() {
               ))}
 
               {showCta && (
-                <div className="mt-3.5 p-4 bg-white border border-hairline rounded-lg shadow-sm font-mono text-[12px] sm:text-[13px] font-medium text-ash flex items-center gap-3.5 flex-wrap text-left">
+                <div className="mt-3.5 p-4 bg-white border border-hairline rounded-lg shadow-sm font-mono text-sm font-medium text-ash flex items-center gap-3.5 flex-wrap text-left">
                   <span className="break-words">
                     Your team is ready to build{" "}
                     <strong className="text-paper font-bold break-words">
@@ -331,7 +331,7 @@ export default function Hero() {
                     href="https://app.takumi.run/login"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2.5 text-[11px] bg-black text-white font-mono font-semibold uppercase tracking-wide rounded-lg"
+                    className="px-4 py-2.5 text-xs bg-black text-white font-mono font-semibold uppercase tracking-wide rounded-lg"
                   >
                     Join Alpha to start →
                   </a>
@@ -341,7 +341,7 @@ export default function Hero() {
           )}
         </div>
 
-        <div className="flex items-center justify-center gap-2 sm:gap-2.5 flex-wrap mt-6 sm:mt-7 font-mono text-[11px] sm:text-[12.5px] font-semibold tracking-wide text-ash-dim">
+        <div className="flex items-center justify-center gap-2 sm:gap-2.5 flex-wrap mt-6 sm:mt-7 font-mono text-[12.5px] font-semibold tracking-wide text-ash-dim">
           <span>4 AI agents</span>
           <span className="text-hairline-strong">·</span>
           <span>Own your code</span>

@@ -42,16 +42,16 @@ function CompareCard({ card, delay }) {
       <div className="w-[42px] h-[42px] flex items-center justify-center border border-hairline-strong rounded-[10px] text-lg font-bold text-black bg-gradient-to-br from-white to-[#e8e8e8] shadow-sm mb-[22px]">
         {card.icon}
       </div>
-      <h3 className="font-mono text-lg font-bold text-paper mb-2.5">
+      <h3 className="font-mono text-xl md:text-lg font-bold text-paper mb-2.5">
         {card.title}
       </h3>
       <p
-        className={`font-mono text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-1.5 ${card.statusClass}`}
+        className={`font-mono text-sm md:text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-1.5 ${card.statusClass}`}
       >
         {card.highlight && <span className="dot-pulse" />}
         {card.status}
       </p>
-      <p className="text-ash text-md font-medium leading-relaxed">
+      <p className="text-ash text-lg md:text-md font-medium leading-relaxed">
         {card.copy}
       </p>
     </article>
@@ -67,12 +67,12 @@ export default function Compare() {
       className="bg-white border-y border-hairline shadow-[0_10px_40px_-10px_rgba(0,0,0,0.02)] py-[clamp(60px,9vw,108px)]"
     >
       <div className="max-w-[1180px] mx-auto px-7">
-        <p className="font-mono text-xs tracking-[0.16em] uppercase text-ash mb-4 font-bold flex items-center gap-2 before:content-[''] before:w-3.5 before:h-0.5 before:bg-black">
+        <p className="font-mono text-sm md:text-xs tracking-[0.16em] uppercase text-ash mb-4 font-bold flex items-center gap-2 before:content-[''] before:w-3.5 before:h-0.5 before:bg-black">
           COMPARISON
         </p>
         <h2
           ref={titleRef}
-          className={`font-display font-extrabold text-[clamp(28px,3.6vw,44px)] tracking-[-0.01em] leading-[1.12] text-paper transition-all duration-700 ${
+          className={`font-display text-4xl font-extrabold md:text-[clamp(28px,3.6vw,44px)] tracking-[-0.01em] leading-[1.12] text-paper transition-all duration-700 ${
             titleInView
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[22px]"

@@ -41,7 +41,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-[var(--hairline)] py-7 bg-white">
       <div className="max-w-[1180px] mx-auto px-7 flex items-center justify-between flex-wrap gap-4">
-        <p className="font-mono text-[12.5px] font-semibold text-[var(--ash-dim)]">
+        <p className="font-mono text-md font-semibold text-[var(--ash-dim)]">
           © 2026 Takumi
         </p>
 
@@ -54,19 +54,19 @@ export default function Footer() {
           </a> */}
           <a
             href="https://discord.gg/spe79aHC9W"
-            className="font-mono text-[12.5px] font-semibold text-[var(--ash)] hover:text-black transition-colors"
+            className="font-mono text-md font-semibold text-[var(--ash)] hover:text-black transition-colors"
           >
             Discord
           </a>
           <a
             href="mailto:hiretakumi.run@gmail.com"
-            className="font-mono text-[12.5px] font-semibold text-[var(--ash)] hover:text-black transition-colors"
+            className="font-mono text-md font-semibold text-[var(--ash)] hover:text-black transition-colors"
           >
             Email
           </a>
         </div>
 
-        <p className="flex items-center gap-2 font-mono text-[12.5px] font-semibold text-[var(--ash-dim)]">
+        <p className="flex items-center gap-2 font-mono text-md font-semibold text-[var(--ash-dim)]">
           <span className="w-1.5 h-1.5 rounded-full bg-black shadow-[0_0_0_0_rgba(0,0,0,0.2)] animate-pulse" />
           All Systems Operational
         </p>
