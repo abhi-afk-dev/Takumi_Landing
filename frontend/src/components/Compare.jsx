@@ -42,16 +42,16 @@ function CompareCard({ card, delay }) {
       <div className="w-[42px] h-[42px] flex items-center justify-center border border-hairline-strong rounded-[10px] text-lg font-bold text-black bg-gradient-to-br from-white to-[#e8e8e8] shadow-sm mb-[22px]">
         {card.icon}
       </div>
-      <h3 className="font-mono text-xl md:text-lg font-bold text-paper mb-2.5">
+      <h3 className="font-mono text-xl lg:text-lg font-bold text-paper mb-2.5">
         {card.title}
       </h3>
       <p
-        className={`font-mono text-sm md:text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-1.5 ${card.statusClass}`}
+        className={`font-mono text-sm lg:text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-1.5 ${card.statusClass}`}
       >
         {card.highlight && <span className="dot-pulse" />}
         {card.status}
       </p>
-      <p className="text-ash text-lg md:text-md font-medium leading-relaxed">
+      <p className="text-ash text-lg lg:text-sm font-medium leading-relaxed">
         {card.copy}
       </p>
     </article>

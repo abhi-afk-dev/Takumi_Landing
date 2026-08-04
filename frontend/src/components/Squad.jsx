@@ -34,10 +34,10 @@ function SquadCard({ member, delay }) {
       <div className="w-[42px] h-[42px] flex items-center justify-center border border-hairline-strong rounded-[10px] text-lg font-bold text-black bg-gradient-to-br from-white to-[#e8e8e8] shadow-sm mb-[22px]">
         {member.icon}
       </div>
-      <h3 className="font-display font-extrabold text-3xl md:text-2xl mb-3">
+      <h3 className="font-display font-extrabold text-3xl lg:text-2xl mb-3">
         {member.title}
       </h3>
-      <p className="text-ash text-lg md:text-md font-medium leading-relaxed">
+      <p className="text-ash text-lg lg:text-sm font-medium leading-relaxed">
         {member.copy}
       </p>
     </article>
@@ -57,7 +57,7 @@ export default function Squad() {
         </p>
         <h2
           ref={titleRef}
-          className={`font-display text-4xl font-extrabold md:text-[clamp(28px,3.6vw,44px)] tracking-[-0.01em] leading-[1.12] text-paper transition-all duration-700 mb-[18px] ${
+          className={`font-display text-4xl font-extrabold lg:text-[clamp(28px,3.6vw,44px)] tracking-[-0.01em] leading-[1.12] text-paper transition-all duration-700 mb-[18px] ${
             titleInView
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[22px]"
@@ -81,10 +81,10 @@ export default function Squad() {
             <div className="w-[42px] h-[42px] flex items-center justify-center border border-hairline-strong rounded-[10px] text-lg font-bold text-black bg-gradient-to-br from-white to-[#e8e8e8] shadow-sm mb-[22px]">
               ◈
             </div>
-            <h3 className="font-display font-extrabold text-3xl md:text-2xl mb-3">
+            <h3 className="font-display font-extrabold text-3xl lg:text-2xl mb-3">
               The Tech Lead
             </h3>
-            <p className="text-ash text-lg md:text-md font-medium leading-relaxed">
+            <p className="text-ash text-lg lg:text-sm font-medium leading-relaxed">
               From raw idea to deployed product. They research, spec, and
               orchestrate the entire build. Think of them as your CTO.
             </p>
