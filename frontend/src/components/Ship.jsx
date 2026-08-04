@@ -70,13 +70,13 @@ export default function Ship() {
               : "opacity-0 translate-y-[22px]"
           }`}
         >
-          <p className="font-mono text-[11.5px] tracking-[0.16em] uppercase text-ash mb-4 font-bold flex items-center gap-2 before:content-[''] before:w-3.5 before:h-0.5 before:bg-black">
+          <p className="font-mono text-xs tracking-[0.16em] uppercase text-ash mb-4 font-bold flex items-center gap-2 before:content-[''] before:w-3.5 before:h-0.5 before:bg-black">
             FROM BRIEF TO PRODUCTION
           </p>
           <h2 className="font-display font-extrabold text-[clamp(28px,3.6vw,44px)] tracking-[-0.01em] leading-[1.12] text-paper">
             What you can ship tonight.
           </h2>
-          <p className="text-ash text-[15.5px] font-medium my-[18px] mb-[30px] leading-[1.7] max-w-[440px]">
+          <p className="text-ash text-md font-medium my-[18px] mb-[30px] leading-[1.7] max-w-[440px]">
             From consumer-facing web apps to complex backend infrastructure —
             describe what you need, and Takumi provisions the entire stack
             autonomously.
@@ -85,11 +85,11 @@ export default function Ship() {
             {shipList.map((item, i) => (
               <li
                 key={item.label}
-                className={`flex items-center gap-3.5 py-4 border-t border-hairline font-mono text-[14.5px] font-semibold text-paper ${
+                className={`flex items-center gap-3.5 py-4 border-t border-hairline font-mono text-md font-semibold text-paper ${
                   i === shipList.length - 1 ? "border-b" : ""
                 }`}
               >
-                <span className="text-black w-[22px] text-center text-[15px] flex-shrink-0">
+                <span className="text-black w-[22px] text-center text-md flex-shrink-0">
                   {item.icon}
                 </span>
                 {item.label}

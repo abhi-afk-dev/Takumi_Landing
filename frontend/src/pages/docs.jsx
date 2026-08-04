@@ -5,10 +5,12 @@ import Footer from "../components/Footer";
 
 export default function DocsPage() {
   return (
-    <div className="bg-ink text-paper min-h-screen w-full">
-      <AnnouncementBar />
-      <Header />
-      <Docs />
+    <div className="flex flex-col justify-between bg-ink text-paper h-screen w-full">
+      <div className="w-full">
+        <AnnouncementBar />
+        <Header />
+        <Docs />
+      </div>
       <Footer />
     </div>
   );

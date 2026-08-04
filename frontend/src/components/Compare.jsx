@@ -31,7 +31,7 @@ function CompareCard({ card, delay }) {
     <article
       ref={ref}
       style={{ transitionDelay: inView ? `${delay}ms` : "0ms" }}
-      className={`rounded-2xl border p-[30px_26px_34px] transition-all duration-700 shadow-md hover:-translate-y-1.5 ${
+      className={`flex-1 w-full rounded-2xl border p-[30px_26px_34px] transition-all duration-700 shadow-md hover:-translate-y-1.5 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[22px]"
       } ${
         card.highlight
@@ -42,16 +42,16 @@ function CompareCard({ card, delay }) {
       <div className="w-[42px] h-[42px] flex items-center justify-center border border-hairline-strong rounded-[10px] text-lg font-bold text-black bg-gradient-to-br from-white to-[#e8e8e8] shadow-sm mb-[22px]">
         {card.icon}
       </div>
-      <h3 className="font-mono text-base font-bold text-paper mb-2.5">
+      <h3 className="font-mono text-lg font-bold text-paper mb-2.5">
         {card.title}
       </h3>
       <p
-        className={`font-mono text-[10.5px] font-bold tracking-wide uppercase mb-4 flex items-center gap-1.5 ${card.statusClass}`}
+        className={`font-mono text-xs font-bold tracking-wide uppercase mb-4 flex items-center gap-1.5 ${card.statusClass}`}
       >
         {card.highlight && <span className="dot-pulse" />}
         {card.status}
       </p>
-      <p className="text-ash text-[14.5px] font-medium leading-relaxed">
+      <p className="text-ash text-md font-medium leading-relaxed">
         {card.copy}
       </p>
     </article>
@@ -67,7 +67,7 @@ export default function Compare() {
       className="bg-white border-y border-hairline shadow-[0_10px_40px_-10px_rgba(0,0,0,0.02)] py-[clamp(60px,9vw,108px)]"
     >
       <div className="max-w-[1180px] mx-auto px-7">
-        <p className="font-mono text-[11.5px] tracking-[0.16em] uppercase text-ash mb-4 font-bold flex items-center gap-2 before:content-[''] before:w-3.5 before:h-0.5 before:bg-black">
+        <p className="font-mono text-xs tracking-[0.16em] uppercase text-ash mb-4 font-bold flex items-center gap-2 before:content-[''] before:w-3.5 before:h-0.5 before:bg-black">
           COMPARISON
         </p>
         <h2
@@ -80,7 +80,7 @@ export default function Compare() {
         >
           Why Takumi?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[18px] mt-10">
+        <div className="flex flex-col lg:flex-row gap-[18px] mt-10">
           {cards.map((card, i) => (
             <CompareCard key={card.title} card={card} delay={i * 100} />
           ))}

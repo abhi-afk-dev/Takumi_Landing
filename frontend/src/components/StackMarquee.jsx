@@ -20,10 +20,10 @@ export default function StackMarquee() {
   return (
     <section className="py-11 border-y border-hairline bg-white">
       <div className="max-w-[1180px] mx-auto px-7 text-center mb-7">
-        <p className="font-mono text-[11.5px] tracking-widest uppercase text-ash mb-4 font-bold flex items-center justify-center gap-2">
+        <p className="font-mono text-xs sm:text-[11.5px] tracking-widest uppercase text-ash mb-4 font-bold flex items-center justify-center gap-2">
           THE STACK
         </p>
-        <p className="text-ash-dim text-[13.5px] font-semibold font-mono max-w-[440px] mx-auto">
+        <p className="text-ash-dim text-sm sm:text-[13.5px] font-semibold font-mono max-w-[440px] mx-auto">
           The same production tools your engineering team would choose by hand.
         </p>
       </div>
@@ -33,9 +33,9 @@ export default function StackMarquee() {
           {marqueeItems.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 px-4 py-2.5 mr-3.5 border border-hairline rounded-full font-mono text-[12.5px] font-semibold text-ash bg-white shadow-sm whitespace-nowrap"
+              className="flex items-center gap-2 px-4 py-2.5 mr-3.5 border border-hairline rounded-full font-mono text-sm sm:text-[12.5px] font-semibold text-ash bg-white shadow-sm whitespace-nowrap"
             >
-              <span className="text-black font-bold text-[13px]">
+              <span className="text-black font-bold text-sm sm:text-[13px]">
                 {item.glyph}
               </span>
               {item.name}
