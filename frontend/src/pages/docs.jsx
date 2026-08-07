@@ -7,7 +7,7 @@ export default function DocsPage() {
   return (
     <div className="flex flex-col justify-between bg-ink text-paper h-screen w-full">
       <div className="w-full">
-        <AnnouncementBar />
+        {/* <AnnouncementBar /> */}
         <Header />
         <Docs />
       </div>
