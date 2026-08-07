@@ -16,13 +16,6 @@ export default function App() {
   return (
     <>
       <ProgressBar />
-      <head>
-        <script
-          async
-          src="https://startupbar.co/widget/loader.js"
-          data-startup-id="56cc676b-f76e-481a-9e3b-3cbcb7e85a19"
-        ></script>
-      </head>
       {/* <AnnouncementBar /> */}
       <Header />
       <main>
